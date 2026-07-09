@@ -13,7 +13,7 @@
 }
 
 .info-field__value--positive {
-  color: var(--color-positive);
+  color: var(--color-negative);
 }
 
 @media (max-width: 900px) {

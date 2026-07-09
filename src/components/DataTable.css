@@ -1,9 +1,3 @@
-/* ===== DataTable.css ===== */
-.data-table-wrap {
-  border: 1px solid var(--colors-border-border-secondary, #E5E5E5);
-  border-radius: 12px;
-  overflow: hidden;
-}
 
 .data-table {
   min-width: 640px;
@@ -13,11 +7,22 @@
   width: 100%;
   border: 1px solid var(--colors-border-border-secondary, #E5E5E5);
   border-radius: 12px;
-  overflow: hidden;
-}
 
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;      
+  -ms-overflow-style: none;  
+}
+.data-table-wrap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;              
+}
 .data-table {
-  min-width: 640px;
+  width: max-content;
+  min-width: 100%;
 }
 
 .data-table th {

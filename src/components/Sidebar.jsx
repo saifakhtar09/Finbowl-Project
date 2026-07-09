@@ -49,7 +49,7 @@ export default function Sidebar() {
   const [rmsOpen, setRmsOpen] = useState(true)
 
   return (
-    <aside className="sidebar">
+    <aside className="sidebar no-scrollbar">
       <div className="sidebar__brand">
         <img src={Logo} alt="FinBowl" className="sidebar__logo" />
       </div>
@@ -110,8 +110,11 @@ export default function Sidebar() {
           </button>
         ))}
       </nav>
-
-      <div className="sidebar__version">Version 1.0</div>
+<div className="sidebar__version">
+  <span className="sidebar__version-pill">
+    • Version 1.0
+  </span>
+</div>
     </aside>
   )
 }

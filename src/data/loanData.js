@@ -30,7 +30,7 @@ export const mockLoan = {
     bank: 'HDFC Bank - (Adyar Branch)',
     stage: 'Lead',
     sanctionedDate: '22/11/2024',
-    sanctionedAmount: 480000,
+    sanctionedAmount: 22300000,
     verifiedSanctionedAmount: 480000,
     bankExecutive: 'Amit Sharma',
     creditExecutive: 'Preethi Sharma',
@@ -45,14 +45,14 @@ export const mockLoan = {
   ],
 
   commission: {
-    total: 28640,
-    rows: [
-      { party: 'Amit Sharma', subCode: 0.75, gross: 0.75, amount: 3400, invoiceNo: 'RMS-INV-2026-00156', invoiceStatus: 'Paid' },
-      { party: 'Anjali Mehta', subCode: 0.85, gross: 1.25, amount: 4200, invoiceNo: 'RMS-INV-2026-00157', invoiceStatus: 'Paid' },
-      { party: 'Ravi Kumar', subCode: 0.90, gross: 1.50, amount: 5000, invoiceNo: 'RMS-INV-2026-00158', invoiceStatus: 'Paid' },
-      { party: 'Sneha Iyer', subCode: 1.00, gross: 2.00, amount: 6300, invoiceNo: 'RMS-INV-2026-00159', invoiceStatus: 'Paid' },
-    ],
-  },
+  total: 28640,
+  rows: [
+    { party: 'Amit Sharma', subCode: 0.75, gross: 0.75, amount: 3400, invoiceNo: 'RMS-INV-2026-00156', invoiceStatus: 'Paid' },
+    { party: 'Anjali Mehta', subCode: 0.85, gross: 1.25, amount: 4200, invoiceNo: 'RMS-INV-2026-00157', invoiceStatus: 'Paid' },
+    { party: 'Ravi Kumar', subCode: 0.90, gross: 1.50, amount: 6000, invoiceNo: 'RMS-INV-2026-00158', invoiceStatus: 'Paid' },
+    { party: 'Sneha Iyer', subCode: 1.00, gross: 2.00, amount: 6300, invoiceNo: 'RMS-INV-2026-00159', invoiceStatus: 'Paid' },
+  ],
+},
 
   broker: {
     totalReferralFee: 8640,

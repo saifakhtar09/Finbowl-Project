@@ -83,11 +83,26 @@
 .btn--primary:hover {
   background: var(--color-accent-hover);
 }
+
+/* Stack action buttons full-width on small screens */
+@media (max-width: 480px) {
+  .page-header__actions {
+    width: 100%;
+  }
+  .btn--archive,
+  .btn--activity,
+  .btn--primary {
+    width: auto;
+    flex: 1;
+  }
+}
+
 .page-header__breadcrumb {
   display: flex;
   align-items: center;
   gap: 2px;
   margin-top: 4px;
+  flex-wrap: wrap;
 }
 
 .page-header__crumb {
@@ -128,7 +143,7 @@
   line-height: var(--line-height-text-xs, 18px);
   letter-spacing: 0;
 
-  color: var(--brand-700);
+  color: var(--brand-700, #6941C6);
 }
 
 .page-header__crumb-sep {
@@ -140,8 +155,7 @@
 }
 
 .page-header__title {
-  width: 1182px;
-  height: 30px;
+  max-width: 100%;
 
   margin: 0;
 
@@ -153,4 +167,5 @@
   letter-spacing: 0;
 
   color: #171717;
+  word-break: break-word;
 }

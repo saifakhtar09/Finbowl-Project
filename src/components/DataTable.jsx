@@ -1,6 +1,10 @@
 import { ChevronsUpDown } from 'lucide-react'
 import './DataTable.css'
 
+/**
+ * columns: [{ key, label, sortable, render?: (row) => node, align? }]
+ * rows: array of plain objects
+ */
 export default function DataTable({ columns, rows, getRowKey }) {
   return (
     <div className="data-table-wrap">

@@ -17,13 +17,13 @@
 }
 
 .badge--positive {
-  background: var(--color-positive-bg);
-  color: var(--color-positive);
+  background: #BBF7D0;
+  color:#15803D;
 }
 
 .badge--negative {
-  background: var(--color-negative-bg);
-  color: var(--color-negative);
+  background:#FBCFE8;
+  color: #BE185D;
 }
 
 .badge--warning {
@@ -42,6 +42,11 @@
 }
 
 .badge--accent {
-  background: var(--color-accent-soft);
-  color: var(--color-accent);
+  background: #E9D7FE;
+  color: #6941C6;
+}
+
+.badge badge--success{
+  background: #BBF7D0;
+  color: #15803D;
 }

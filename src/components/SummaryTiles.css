@@ -1,7 +1,18 @@
 .summary-tiles-wrap {
+  position: relative;
   margin-bottom: var(--space-5);
+  padding-bottom: 24px;
 }
 
+.summary-tiles-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #E5E5E5;
+}
 .summary-tiles-wrap__toggle-row {
   display: flex;
   align-items: center;
