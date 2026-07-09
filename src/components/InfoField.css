@@ -1,0 +1,12 @@
+.info-field__label {
+  margin: 0 0 4px 0;
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+}
+
+.info-field__value {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}

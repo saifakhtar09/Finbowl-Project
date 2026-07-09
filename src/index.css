@@ -1,111 +1,174 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* ===========================
+     Sidebar
+  ============================ */
+  --sidebar-width: 288px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sidebar-grad-start: #6941C6;
+  --sidebar-grad-mid: #42307D;
+  --sidebar-grad-end: #2C1C5F;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --sidebar-bg: linear-gradient(
+    15.34deg,
+    #6941C6 18.11%,
+    #42307D 40.01%,
+    #2C1C5F 78.48%
+  );
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --sidebar-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
+  --sidebar-active-bg: #FFFFFF;
+  --sidebar-active-text: #4C2FBF;
+  --sidebar-text: #D9D2F5;
+  --sidebar-text-muted: #B4A8E0;
+
+  /* ===========================
+     Surfaces
+  ============================ */
+  --color-bg: #F6F6FB;
+  --color-surface: #FFFFFF;
+  --color-border: #E8E8F0;
+  --color-border-soft: #F0F0F6;
+
+  /* ===========================
+     Text
+  ============================ */
+  --color-text-primary: #171423;
+  --color-text-secondary: #6B6B7B;
+  --color-text-tertiary: #9797A6;
+
+  /* ===========================
+     Brand / accent
+  ============================ */
+  --color-accent: #6C4FE0;
+  --color-accent-hover: #5B3ED1;
+  --color-accent-soft: #EFEAFD;
+
+  /* ===========================
+     Status
+  ============================ */
+  --color-positive: #16A34A;
+  --color-positive-bg: #E7F8ED;
+  --color-negative: #DC2626;
+  --color-negative-bg: #FDECEC;
+  --color-warning: #B45309;
+  --color-warning-bg: #FEF3C7;
+  --color-neutral-bg: #F3F4F6;
+  --color-neutral-text: #4B5563;
+  --color-info-bg: #EAF2FE;
+  --color-info-text: #1D4ED8;
+
+  /* ===========================
+     Figma section-card tokens
+  ============================ */
+  --color-border-card: rgba(0, 0, 0, 0.1);            /* border-secondary_alt */
+  --colors-border-border-secondary: #E5E5E5;           /* header bottom border */
+  --colors-background-bg-secondary-alt: #FAFAFA;       /* header background */
+  --radius-card: 12px;
+
+  /* ===========================
+     Figma button tokens (NEW)
+  ============================ */
+  --spacing-md-btn: 8px;
+  --spacing-lg-btn: 12px;
+  --btn-radius: 8px;
+
+  --color-bg-brand-solid: #7F56D9;
+  --color-bg-primary: #FFFFFF;
+  --color-border-primary: #D4D4D4;
+
+  --shadow-xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-skeumorphic-inner-dark: 0px -2px 0px 0px rgba(0, 0, 0, 0.05) inset;
+  --shadow-skeumorphic-inner-light: 0px -2px 0px 0px rgba(255, 255, 255, 0.12) inset;
+  --shadow-skeumorphic-border: 0px 0px 0px 1px rgba(0, 0, 0, 0.18) inset;
+
+  /* ===========================
+     Type
+  ============================ */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ===========================
+     Spacing scale
+  ============================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+  --space-7: 40px;
+  --space-xl: 24px;
+  --space-2xl: 24px;   /* Figma spacing-2xl */
+  --space-3xl: 32px;   /* Figma spacing-3xl */
+
+  /* ===========================
+     Radius
+  ============================ */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+html, body, #root {
+  height: 100%;
 }
 
 body {
   margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+button {
+  font-family: inherit;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.amount-positive {
+  color: var(--color-positive);
+  font-variant-numeric: tabular-nums;
+}
+
+.amount-mismatch {
+  color: var(--color-negative);
+  font-variant-numeric: tabular-nums;
+}
+
+.link-text {
+  color: var(--color-accent);
   font-weight: 500;
-  color: var(--text-h);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+.broker-code-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 2px;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+.broker-code {
+  color: var(--color-text-tertiary);
+  font-size: 0.78rem;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.broker-po-date {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
 }

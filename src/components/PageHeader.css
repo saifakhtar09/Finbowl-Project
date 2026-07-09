@@ -1,0 +1,156 @@
+/* ===== Action Buttons ===== */
+
+.page-header__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 36px;
+  border-radius: var(--btn-radius);
+  padding: var(--spacing-md-btn) var(--spacing-lg-btn);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: box-shadow 0.15s ease, background 0.15s ease;
+}
+
+/* Shared Ghost Button Style */
+.btn--ghost {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  color: var(--color-text-primary);
+
+  box-shadow:
+    var(--shadow-xs),
+    var(--shadow-skeumorphic-inner-dark),
+    var(--shadow-skeumorphic-border);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-accent);
+}
+
+/* Individual Widths */
+.btn--archive {
+  width: 106px;
+}
+
+.btn--activity {
+  width: 140px;
+}
+
+/* Edit Loan */
+.btn--primary {
+  position: relative;
+  width: 116px;
+  background: var(--color-bg-brand-solid);
+  border: none;
+  border-radius: var(--btn-radius);
+  color: #fff;
+
+  box-shadow:
+    var(--shadow-xs),
+    var(--shadow-skeumorphic-inner-light),
+    var(--shadow-skeumorphic-border);
+}
+
+.btn--primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.12) 0%,
+    rgba(255,255,255,0) 100%
+  );
+
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+}
+.page-header__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.page-header__crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* RMS & Disbursement */
+.page-header__crumb-text {
+  width: fit-content;
+  height: 18px;
+
+  display: inline-flex;
+  align-items: center;
+
+  font-family: var(--font-family-body, Inter, sans-serif);
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--text-xs, 12px);
+  line-height: var(--line-height-text-xs, 18px);
+  letter-spacing: 0;
+
+  color: var(--colors-text-text-quaternary-500, #737373);
+}
+
+/* Rahul Verma */
+.page-header__crumb--current {
+  display: inline-flex;
+  align-items: center;
+
+  height: 18px;
+
+  font-family: var(--font-family-body, Inter, sans-serif);
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--text-xs, 12px);
+  line-height: var(--line-height-text-xs, 18px);
+  letter-spacing: 0;
+
+  color: var(--brand-700);
+}
+
+.page-header__crumb-sep {
+  width: 16px;
+  height: 16px;
+
+  color: #A3A3A3;
+  flex-shrink: 0;
+}
+
+.page-header__title {
+  width: 1182px;
+  height: 30px;
+
+  margin: 0;
+
+  font-family: var(--font-family-body, Inter, sans-serif);
+  font-weight: 600;
+  font-style: normal;
+  font-size: var(--text-xl, 20px);
+  line-height: var(--line-height-text-xl, 30px);
+  letter-spacing: 0;
+
+  color: #171717;
+}

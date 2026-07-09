@@ -1,0 +1,259 @@
+.sidebar {
+  width: 288px;
+  min-height: 100vh;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    15.34deg,
+    #6941c6 18.11%,
+    #42307d 40.01%,
+    #2c1c5f 78.48%
+  );
+
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
+  color: #ffffff;
+
+  padding: 16px 12px 20px;
+
+  overflow-y: auto;
+}
+
+/* ================= Brand ================= */
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.sidebar__logo {
+  width: 139px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================= Search ================= */
+
+.sidebar__search {
+  height: 36px;
+  width: 256px;
+  color:#FAFAFA;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+
+
+  font-size: 14px;
+
+  margin-bottom: 24px;
+}
+
+.sidebar__icon{
+    width:20px;
+    height:20px;
+    flex-shrink:0;
+    object-fit:contain;
+}
+
+.sidebar__chevron{
+    width:16px;
+    height:16px;
+    margin-left:auto;
+    transition:.2s;
+}
+
+.sidebar__chevron--open{
+    transform:rotate(180deg);
+}
+
+/* ================= Navigation ================= */
+
+.sidebar__nav {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar__group {
+  margin-top: 4px;
+}
+
+/* ================= Links ================= */
+
+.sidebar__link {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 12px;
+
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  line-height: 20px;
+  color: #FFFFFF99;
+
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.sidebar__link span {
+  flex: 1;
+  text-align: left;
+}
+
+.sidebar__link:hover {
+ color: #FFFFFF;
+  background: rgba(255,255,255,.08);
+}
+
+.sidebar__link--parent {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ================= Chevron ================= */
+
+.sidebar__chevron {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+}
+
+.sidebar__chevron--open {
+  transform: rotate(180deg);
+}
+
+/* ================= Submenu ================= */
+
+.sidebar__submenu {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar__submenu::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: rgba(255,255,255,.18);
+  border-radius: 2px;
+}
+
+.sidebar__link--sub {
+  position: relative;
+}
+
+.sidebar__link--active::before {
+  content: "";
+  position: absolute;
+
+  left: -13px;      /* adjust until it sits over the vertical line */
+  top: 6px;
+
+  width: 2px;
+  height: 28px;     /* same height as the active button */
+
+  background: #FFFFFF;
+  border-radius: 2px;
+}
+/* ================= Active ================= */
+
+.sidebar__link--active {
+ background: rgba(255,255,255,.12);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.sidebar__link--active:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ================= Divider ================= */
+
+.sidebar__divider {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  margin: 10px 0;
+}
+
+/* ================= Version ================= */
+
+.sidebar__version {
+  padding: 16px 12px 0;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 76px;
+    padding: 16px 8px;
+  }
+
+  .sidebar__logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sidebar__search span,
+  .sidebar__link span,
+  .sidebar__version {
+    display: none;
+  }
+
+  .sidebar__brand,
+  .sidebar__search,
+  .sidebar__link {
+    justify-content: center;
+  }
+
+  .sidebar__submenu,
+  .sidebar__chevron {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    display: none;
+  }
+}

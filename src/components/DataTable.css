@@ -1,0 +1,50 @@
+/* ===== DataTable.css ===== */
+.data-table-wrap {
+  border: 1px solid var(--colors-border-border-secondary, #E5E5E5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.data-table {
+  min-width: 640px;
+}
+
+.data-table-wrap {
+  width: 100%;
+  border: 1px solid var(--colors-border-border-secondary, #E5E5E5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.data-table {
+  min-width: 640px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--colors-border-border-secondary, #E5E5E5);
+  background: var(--colors-background-bg-secondary-alt, #FAFAFA);
+  color: var(--color-text-tertiary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.data-table__th-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-text-tertiary);
+}
+
+.data-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border-soft);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}

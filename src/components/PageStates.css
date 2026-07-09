@@ -1,0 +1,74 @@
+.page-header {
+  margin-bottom: var(--space-5);
+}
+
+.page-header__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  min-height: 52px; /* confirmed: Fill × Hug (52px) in Figma */
+  margin-bottom: var(--space-4);
+}
+
+.page-header__breadcrumb {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: var(--space-1);
+}
+
+.page-header__crumb--current {
+  color: #6941C6;
+  font-weight: 500;
+}
+
+.page-header__crumb-sep {
+  margin: 0 var(--space-1);
+}
+
+.page-header__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.page-header__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Shared button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--ghost {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-accent);
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+}
