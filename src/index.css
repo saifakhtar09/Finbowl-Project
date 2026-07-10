@@ -1,11 +1,30 @@
+/* ============================================================
+   DESIGN TOKENS
+   ------------------------------------------------------------
+   ⚠️ Values flagged below are estimates. Confirm exact px/hex
+   via Figma's Inspect / Primitives panel and correct if needed.
+   ============================================================ */
 :root {
-  
+  /* Brand color scale (confirmed via Figma Inspect) */
+  --brand-700: #6941C6;
+  --brand-900: #42307D;
+  --brand-950: #2C1C5F;
+
+  /* Sidebar — linear gradient, 3 stops */
+  --sidebar-grad-start: var(--brand-700);
+  --sidebar-grad-mid: var(--brand-900);
+  --sidebar-grad-end: var(--brand-950);
+  --sidebar-active-bg: #FFFFFF;
+  --sidebar-active-text: #4C2FBF;
+  --sidebar-text: #D9D2F5;
+  --sidebar-text-muted: #B4A8E0;
 
   /* Surfaces */
   --color-bg: #F6F6FB;
   --color-surface: #FFFFFF;
-  --color-border: #E8E8F0;
+  --color-border: #E5E5E5;
   --color-border-soft: #F0F0F6;
+  --shadow-card: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
 
   /* Text */
   --color-text-primary: #171423;
@@ -41,26 +60,50 @@
   --space-6: 28px;
   --space-7: 40px;
   --space-xl: 24px;
-  --space-3xl: 32px;
+  --space-2xl: 32px;
+  --space-3xl: 40px;
 
   /* Radius */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
+  --radius-xl: 20px;
   --radius-pill: 999px;
 
   /* Layout */
   --sidebar-width: 288px;
+
+  /* Aliases for Figma Dev Mode variable names used in TopBar/PageHeader buttons */
+  --color-bg-primary: var(--color-surface);
+  --color-border-primary: var(--color-border);
+  --color-bg-brand-solid: var(--color-accent);
+  --btn-radius: 8px;
+  --spacing-md-btn: 8px;
+  --spacing-lg-btn: 16px;
+  --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-skeumorphic-inner-dark: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.05);
+  --shadow-skeumorphic-inner-light: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.12);
+  --shadow-skeumorphic-border: 0px 0px 0px 1px rgba(10, 13, 18, 0.18);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%;
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-
+ 
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+ 
+img, table, pre, textarea {
+  max-width: 100%;
+}
+ 
 body {
   margin: 0;
   background: var(--color-bg);
@@ -117,10 +160,10 @@ table {
 }
 
 .no-scrollbar {
-  scrollbar-width: none;      
-  -ms-overflow-style: none;   
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  display: none;               
+  display: none;
 }

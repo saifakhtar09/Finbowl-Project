@@ -1,23 +1,17 @@
-import { ChevronsUpDown } from 'lucide-react'
 import './DataTable.css'
 
-/**
- * columns: [{ key, label, sortable, render?: (row) => node, align? }]
- * rows: array of plain objects
- */
 export default function DataTable({ columns, rows, getRowKey }) {
+  if (!rows || rows.length === 0) {
+    return <p className="data-table-empty">No records to display.</p>
+  }
+
   return (
-    <div className="data-table-wrap">
+    <div className="table-scroll">
       <table className="data-table">
         <thead>
           <tr>
             {columns.map((col) => (
-              <th key={col.key} style={col.align ? { textAlign: col.align } : undefined}>
-                <span className="data-table__th-inner">
-                  {col.label}
-                  {col.sortable !== false && <ChevronsUpDown size={12} strokeWidth={2} />}
-                </span>
-              </th>
+              <th key={col.key}>{col.label}</th>
             ))}
           </tr>
         </thead>
@@ -25,7 +19,7 @@ export default function DataTable({ columns, rows, getRowKey }) {
           {rows.map((row, i) => (
             <tr key={getRowKey ? getRowKey(row, i) : i}>
               {columns.map((col) => (
-                <td key={col.key} style={col.align ? { textAlign: col.align } : undefined}>
+                <td key={col.key} data-label={col.label}>
                   {col.render ? col.render(row) : row[col.key]}
                 </td>
               ))}

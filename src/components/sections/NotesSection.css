@@ -1,6 +1,6 @@
 .notes-text {
-  width: 952px;
-  height: 48px;
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   opacity: 1;
 
@@ -13,5 +13,6 @@
   line-height: var(--line-height-text-md);
   letter-spacing: 0;
 
-  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }

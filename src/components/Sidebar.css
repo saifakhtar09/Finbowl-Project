@@ -2,102 +2,65 @@
   width: 288px;
   min-height: 100vh;
   flex-shrink: 0;
-
   display: flex;
   flex-direction: column;
-
-  background: linear-gradient(
-    15.34deg,
-    #6941c6 18.11%,
-    #42307d 40.01%,
-    #2c1c5f 78.48%
-  );
-
+  background: linear-gradient(15.34deg, #6941c6 18.11%, #42307d 40.01%, #2c1c5f 78.48%);
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-
   color: #ffffff;
-
-  padding: 12px 1px 16px;
-  padding-top: 20px;
-
+  padding: 16px 12px 20px;
   overflow-y: auto;
 }
-
-/* ================= Brand ================= */
 
 .sidebar__brand {
   display: flex;
   align-items: center;
-  height: 35px;
+  height: 56px;
   padding: 12px;
-  margin-bottom: 2px;
+  margin-bottom: 16px;
 }
 
 .sidebar__logo {
   width: 139px;
-  height: 72px;
+  height: 32px;
   object-fit: contain;
   display: block;
-  align-items: center;
 }
-
-.sidebar__logo img {
-  height: 28px;
-  width: auto;
-  display: block;
-}
-
-.sidebar__header {
-  margin-bottom: 12px;
-}
-/* ================= Search ================= */
 
 .sidebar__search {
   height: 36px;
   width: 256px;
-  color:#FAFAFA;
-
+  color: #FAFAFA;
   display: flex;
   align-items: center;
   gap: 8px;
-
   padding: 10px 12px;
-
   background: rgba(255, 255, 255, 0.08);
-
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 8px;
-
-
   font-size: 14px;
-
   margin-bottom: 24px;
 }
 
-.sidebar__icon{
-    width:20px;
-    height:20px;
-    flex-shrink:0;
-    object-fit:contain;
+.sidebar__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
-.sidebar__chevron{
-    width:16px;
-    height:16px;
-    margin-left:auto;
-    transition:.2s;
+.sidebar__chevron {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  transition: .2s;
 }
 
-.sidebar__chevron--open{
-    transform:rotate(180deg);
+.sidebar__chevron--open {
+  transform: rotate(180deg);
 }
-
-/* ================= Navigation ================= */
 
 .sidebar__nav {
   flex: 1;
-
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -107,30 +70,21 @@
   margin-top: 4px;
 }
 
-/* ================= Links ================= */
-
 .sidebar__link {
   width: 100%;
   height: 40px;
-
   display: flex;
   align-items: center;
   gap: 12px;
-
   padding: 10px 12px;
-
   background: transparent;
   border: none;
   border-radius: 8px;
   line-height: 20px;
   color: #FFFFFF99;
-
-
   font-size: 14px;
   font-weight: 500;
-
   cursor: pointer;
-
   transition: all 0.2s ease;
 }
 
@@ -140,27 +94,14 @@
 }
 
 .sidebar__link:hover {
- color: #FFFFFF;
-  background: rgba(255,255,255,.08);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, .08);
 }
 
 .sidebar__link--parent {
   color: #ffffff;
   font-weight: 600;
 }
-
-/* ================= Chevron ================= */
-
-.sidebar__chevron {
-  margin-left: auto;
-  transition: transform 0.2s ease;
-}
-
-.sidebar__chevron--open {
-  transform: rotate(180deg);
-}
-
-/* ================= Submenu ================= */
 
 .sidebar__submenu {
   position: relative;
@@ -178,7 +119,7 @@
   top: 8px;
   bottom: 8px;
   width: 2px;
-  background: rgba(255,255,255,.18);
+  background: rgba(255, 255, 255, .18);
   border-radius: 2px;
 }
 
@@ -189,20 +130,16 @@
 .sidebar__link--active::before {
   content: "";
   position: absolute;
-
-  left: -13px;      /* adjust until it sits over the vertical line */
+  left: -13px;
   top: 6px;
-
   width: 2px;
-  height: 28px;     /* same height as the active button */
-
+  height: 28px;
   background: #FFFFFF;
   border-radius: 2px;
 }
-/* ================= Active ================= */
 
 .sidebar__link--active {
- background: rgba(255,255,255,.12);
+  background: rgba(255, 255, 255, .12);
   color: #FFFFFF;
   font-weight: 600;
 }
@@ -211,31 +148,20 @@
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* ================= Divider ================= */
-
 .sidebar__divider {
   width: 100%;
   height: 1px;
-
   background: rgba(255, 255, 255, 0.08);
-
   margin: 10px 0;
 }
 
-/* ================= Version ================= */
-
 .sidebar__version {
-  width: 288px;
-  height: 38px;
+  width: 100%;
   padding: 8px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-
   background: transparent;
 }
 
@@ -244,47 +170,35 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-
-  width: 90px;
-  height: 22px;
   padding: 2px 12px 2px 10px;
-
   border: 0.5px solid #E9D5FF;
   border-radius: 999px;
-
   background: #6941C6;
   color: #E9D5FF;
-
   font-size: 11px;
   font-weight: 500;
   line-height: 1;
 }
-
-/* ================= Responsive ================= */
 
 @media (max-width: 1100px) {
   .sidebar {
     width: 76px;
     padding: 16px 8px;
   }
-
   .sidebar__logo {
     width: 36px;
     height: 36px;
   }
-
   .sidebar__search span,
   .sidebar__link span,
   .sidebar__version {
     display: none;
   }
-
   .sidebar__brand,
   .sidebar__search,
   .sidebar__link {
     justify-content: center;
   }
-
   .sidebar__submenu,
   .sidebar__chevron {
     display: none;
@@ -293,6 +207,68 @@
 
 @media (max-width: 640px) {
   .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 260px;
+    max-width: 80vw;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
+    padding: 16px 12px 20px;
+  }
+  .sidebar--open {
+    transform: translateX(0);
+  }
+  .sidebar__logo {
+    width: 139px;
+    height: 32px;
+  }
+  .sidebar__search span,
+  .sidebar__link span,
+  .sidebar__version {
+    display: inline;
+  }
+  .sidebar__brand,
+  .sidebar__search,
+  .sidebar__link {
+    justify-content: flex-start;
+  }
+  .sidebar__submenu,
+  .sidebar__chevron {
+    display: flex;
+  }
+  .sidebar__brand {
+    justify-content: space-between;
+  }
+  .sidebar__close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    padding: 4px;
+  }
+}
+
+.sidebar__close {
+  display: none;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .sidebar-backdrop {
     display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+  }
+  .sidebar-backdrop--visible {
+    display: block;
   }
 }

@@ -1,6 +1,6 @@
 .app-shell {
   display: flex;
-  min-height: 100vh;   /* was: height: 100vh; overflow: hidden; */
+  min-height: 100vh;
 }
 
 .app-main {
@@ -8,20 +8,22 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  /* removed: height: 100vh; overflow: hidden; */
 }
 
 .app-content {
-  padding: var(--space-6);
+  padding: var(--space-xl);
   flex: 1;
-  /* removed: overflow-y: auto; min-height: 0; */
 }
 
 .loan-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) 20px;
 }
 
 .loan-panel__header-row {
@@ -30,7 +32,6 @@
   justify-content: space-between;
   gap: var(--space-4);
   flex-wrap: wrap;
-  margin-bottom: var(--space-5);
 }
 
 .app-content__body {
@@ -64,10 +65,6 @@
   font-weight: 600;
   color: var(--color-text-primary);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--color-border-soft);
-}
-
-.info-grid + .info-grid__section-label {
   border-top: 1px solid var(--color-border-soft);
 }
 

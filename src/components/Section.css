@@ -4,6 +4,9 @@
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-4);
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .section-card__header {
@@ -21,8 +24,10 @@
 .section-card__title-group {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--space-3);
-  flex-wrap: nowrap;
+  flex: 1;
+  min-width: 0;
 }
 
 .section-card__title {
@@ -32,6 +37,7 @@
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--color-text-primary);
+  min-width: 0;
 }
 
 .section-card__chevron {
@@ -47,4 +53,18 @@
 
 .section-card__body {
   padding: 0 var(--space-5) var(--space-5);
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* inner .table-scroll handles its own scrolling */
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .section-card__header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .section-card__body {
+    padding: 0 var(--space-4) var(--space-4);
+  }
 }

@@ -10,15 +10,17 @@ export default function SummaryTiles({ tiles }) {
   return (
     <div className="summary-tiles-wrap">
       <div className="summary-tiles-wrap__toggle-row">
+        <span className="summary-tiles-wrap__toggle-label">Summary Tiles</span>
         <button
+          type="button"
           className={`toggle${visible ? ' toggle--on' : ''}`}
           onClick={() => setVisible((v) => !v)}
           role="switch"
           aria-checked={visible}
+          aria-label="Toggle summary tiles"
         >
           <span className="toggle__knob" />
         </button>
-        <span className="summary-tiles-wrap__toggle-label">Summary Tiles</span>
       </div>
 
       {visible && (

@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar'
 import TopBar from './components/TopBar'
 import PageHeader from './components/PageHeader'
 import ApplicantSummary from './components/ApplicantSummary'
+import SummaryToggle from './components/SummaryToggle'
 import SummaryTiles from './components/SummaryTiles'
 import DetailTabs from './components/DetailTabs'
 import { LoadingState, ErrorState, EmptyState } from './components/PageStates'
@@ -28,6 +29,8 @@ const TAB_ITEMS = [
 export default function App() {
   const { status, loan, error, reload } = useLoan('2026-04892')
   const [activeTab, setActiveTab] = useState('applicant-information')
+  const [tilesVisible, setTilesVisible] = useState(true)
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const handleTabSelect = (id) => {
     setActiveTab(id)
@@ -36,9 +39,9 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <Sidebar />
+      <Sidebar open={mobileNavOpen} onClose={() => setMobileNavOpen(false)} />
       <div className="app-main">
-        <TopBar />
+        <TopBar onMenuClick={() => setMobileNavOpen(true)} />
         <div className="app-content">
           {status === 'loading' && <LoadingState />}
           {status === 'error' && <ErrorState message={error} onRetry={reload} />}
@@ -46,18 +49,22 @@ export default function App() {
 
           {status === 'success' && (
             <>
-              {/* Breadcrumb + title + action buttons — sits OUTSIDE the card */}
               <PageHeader loanId={loan.id} breadcrumb={loan.breadcrumb} />
 
-              {/* Everything below — applicant name, tiles, tabs, sections —
-                  lives inside ONE bordered, rounded-corner card per Figma */}
               <div className="loan-panel">
-                <ApplicantSummary
-                  applicantName={loan.applicantName}
-                  status={loan.status}
-                  loanTypeLabel={loan.loanTypeLabel}
-                />
-                <SummaryTiles tiles={loan.summary} />
+                <div className="loan-panel__header-row">
+                  <ApplicantSummary
+                    applicantName={loan.applicantName}
+                    status={loan.status}
+                    loanTypeLabel={loan.loanTypeLabel}
+                  />
+                  <SummaryToggle
+                    checked={tilesVisible}
+                    onChange={() => setTilesVisible((v) => !v)}
+                  />
+                </div>
+
+           
 
                 <div className="app-content__body">
                   <DetailTabs items={TAB_ITEMS} activeId={activeTab} onSelect={handleTabSelect} />
